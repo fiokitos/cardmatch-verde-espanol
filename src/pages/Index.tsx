@@ -3,6 +3,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
 import cardMatchImage from "@/assets/cardmatch-credit-card.jpg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Index = () => {
   return (
@@ -101,6 +107,53 @@ const Index = () => {
           </div>
         </article>
       </main>
+
+      {/* FAQ Section */}
+      <section className="bg-background py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+            Preguntas Frecuentes (FAQ)
+          </h2>
+          
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem 
+              value="item-1" 
+              className="border border-border rounded-lg px-6 py-2 bg-card"
+            >
+              <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:text-secondary">
+                ¿Cómo funciona el proceso de solicitud de la tarjeta de crédito CardMatch?
+              </AccordionTrigger>
+              <AccordionContent className="text-foreground leading-relaxed pt-2">
+                El proceso es simple, rápido y 100% online. Solo necesitas completar la solicitud en nuestro sitio web con tus datos personales y de contacto.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem 
+              value="item-2" 
+              className="border border-border rounded-lg px-6 py-2 bg-card"
+            >
+              <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:text-secondary">
+                ¿Cuánto tiempo tarda la aprobación de la tarjeta?
+              </AccordionTrigger>
+              <AccordionContent className="text-foreground leading-relaxed pt-2">
+                La aprobación de la tarjeta generalmente se realiza en pocos minutos. Recibirás una notificación por correo electrónico con el resultado.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem 
+              value="item-3" 
+              className="border border-border rounded-lg px-6 py-2 bg-card"
+            >
+              <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:text-secondary">
+                ¿Cuáles son los requisitos para calificar para la tarjeta de crédito?
+              </AccordionTrigger>
+              <AccordionContent className="text-foreground leading-relaxed pt-2">
+                Los requisitos básicos incluyen ser mayor de edad, tener una identificación válida y comprobar tu residencia. Los detalles completos están disponibles en la sección 'Términos de Uso'.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
 
       <Footer />
     </div>
